@@ -1,0 +1,42 @@
+body {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-bg {
+  background-color: #000;
+}
+
+.header {
+  display: flex; /* colocar imagem do lado do menu */
+  justify-content: space-between; /* espaço entre eles, logo em uma ponta e menu na outra ponta */
+  align-items: center; /* alinhar itens ao centro da navegação */
+  padding: 20px;
+  max-width: 1200px; /* quando tela chega a 1200, container para de crescer */
+  box-sizing: border-box; /* permite que padding não some ao max-width */
+  /* margin auto vai centralizar o conteudo ao passar dos 1200*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-menu {
+  display: flex; /* colocar li uma do lado da outra */
+  gap: 40px;
+}
+
+.header-menu a {
+  padding: 16px 0px;
+  display: inline-block; /* evitar problema com padding quando fizer media queries e elementos estiverem um abaixo do outro */
+  color: #fff;
+  font-size: 1.125rem;
+}
