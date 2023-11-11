@@ -27,11 +27,14 @@ a {
   /* margin auto vai centralizar o conteudo ao passar dos 1200*/
   margin-left: auto;
   margin-right: auto;
+  flex-wrap: wrap; /* quebrar menu pra baixo da logo quando tela diminuir */
+  gap: 20px;
 }
 
 .header-menu {
   display: flex; /* colocar li uma do lado da outra */
   gap: 40px;
+  flex-wrap: wrap; /* quebrar elementos do menu um abaixo do outro */
 }
 
 .header-menu a {
@@ -39,4 +42,47 @@ a {
   display: inline-block; /* evitar problema com padding quando fizer media queries e elementos estiverem um abaixo do outro */
   color: #fff;
   font-size: 1.125rem;
+  position: relative; /* o position absolute do after fica relacionado ao position relative, se não tiver nenhuma definição de position relative, a barra cresce o menu inteiro, ficando relacionada ao body  */
+}
+
+.header-menu a:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0px; 
+  background: #ffffff;
+  margin-top: 4px;
+  transition: 0.3s; /* tempo para barra crescer abaixo do a */
+  position: absolute; /* tirar o traço do fluxo. Sem isso, o menu não fica centralizado com a logo  */
+}
+
+.header-menu a:hover:after {
+  width: 100%; /* 100% da largura do a */
+}
+
+@media (max-width: 800px) {
+  .header-menu {
+    gap: 20px;
+  }
+  .header-menu a {
+    background: #111111;
+    padding: 12px 16px;
+    border-radius: 4px;
+  }
+  .header-menu a:hover {
+    background-color: #2e2e2e;
+  }
+  .header a:after {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-menu {
+    gap: 12px;
+  }
+  .header-menu a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
 }
