@@ -5,7 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <title>Steak House - Churrascaria Premium</title>
   <meta name="description" content="Churrascaria Premium com uma grande variedade de pratos, 3 tipos de carnes selecionadas e uma linha completa de vinhos nacionais e importados.">
+  
   <link rel="stylesheet" href="./css/style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <header class="header-bg"> <!-- Quando a class tem -bg é porque tem um background que se expande de ponta a ponta -->
@@ -13,10 +19,10 @@
       <a href="./"><img src="./img/logo-steak-house.png" alt="Steak House" width="130" height="135"></a> <!-- Home ao clicar na img -->      
       
       <nav aria-label="primaria">
-        <ul class="header-menu">
+        <ul class="header-menu font-1-m cor-0"> <!-- Todos os "a" vão herdar o cor-branco -->
           <li><a href="./carnes.html">Carnes</a></li>
           <li><a href="./vinhos.html">Vinhos</a></li>
-          <li><a href="./reservas.html">Reservas</a></li>
+          <li><a href="./planos.html">Planos</a></li>
           <li><a href="./contato.html">Contato</a></li>
         </ul>
       </nav>        
@@ -28,14 +34,17 @@
       <!-- só de definir a div introducao-conteudo, ela já posiciona o conteudo de um lado e a imagem do outro lado -->
       <div class="introducao-conteudo">
         
-        <h1>Carnes da melhor qualidade<span>.</span></h1>
-        <p>A melhor churrascaria de Belo Horizonte.</p>
-        <a href="./carnes.html">Escolha a sua</a>
+        <h1 class="font-1-xxl cor-0">Carnes da melhor qualidade<span class="cor-p1">.</span></h1>
+        <p class="font-2-l cor-5">A melhor churrascaria de Belo Horizonte.</p>
+        <a class="botao" href="./carnes.html">Escolha um plano</a>
       </div>
       <div> <!-- nunca deixar imagem direto no grid, porque ela funciona diferente em browsers diferentes. Sempre colocar em div ou elemento similar.-->
         <img src="./img/fotos/introducao.jpg" alt="Picanha">
       </div>
     </div>
   </main>
-</body>
+  
+    <h2 class="font-1-xxl">escolha a sua <span class="cor-p1">.</span></h2>
+
+  </body>
 </html>
