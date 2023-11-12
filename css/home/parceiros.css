@@ -1,0 +1,60 @@
+.parceiros {
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
+.parceiros h2 {
+  padding-bottom: 60px;
+}
+
+.parceiros ul {
+  padding: 0 20px;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas de 1 fr*/
+  margin: 0 auto;
+  /* margin 0 auto é forma resumida de escrever: 
+  margin-left: auto;
+  margin-right: auto; */
+}
+
+.parceiros li {
+  display: flex; /* precisa ser flex para a margin do .parceiros img alinhar img ao centro */
+  padding: 32px;
+  border-left: 2px solid var(--cor-2);
+}
+
+.parceiros img {
+  margin: auto; /* cria margin para alinhar img ao centro */
+}
+
+/* tirar borda esquerda do primeiro e do quinto item */
+.parceiros li:first-child, .parceiros li:nth-child(5) {
+  border-left: none;
+}
+
+/* incluir borda top a partir do quinto item */
+.parceiros li:nth-child(n+5) {
+  border-top: 2px solid var(--cor-2);
+}
+
+@media (max-width: 800px) {
+  .parceiros {
+    padding-bottom: 60px;
+  }
+  .parceiros li {
+    padding: 20px;
+  }
+  .parceiros h2 {
+    padding-bottom: 20px;
+  }
+  .parceiros ul {
+    grid-template-columns: repeat(2, 1fr); /* diminuir para 2 colunas apenas */
+  }
+  .parceiros li:nth-child(n+3) {
+    border-top: 2px solid var(--cor-2);
+  }
+  .parceiros li:nth-child(odd) { /* odd = itens impares */
+    border-left: none;
+  }
+}

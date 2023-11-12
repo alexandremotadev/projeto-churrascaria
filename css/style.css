@@ -9,6 +9,8 @@
 /* Home */
 @import "./home/introducao.css";
 @import "./home/bebidas.css";
+@import "./home/parceiros.css";
+@import "./home/depoimento.css";
 
 /* Carnes */
 @import "./carnes/carnes-lista.css";
