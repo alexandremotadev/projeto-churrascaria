@@ -5,15 +5,18 @@
 .header {
   display: flex; /* colocar imagem do lado do menu */
   justify-content: space-between; /* espaço entre eles, logo em uma ponta e menu na outra ponta */
-  align-items: center; /* alinhar itens ao centro da navegação */
-  padding: 20px;
+  align-items: center; /* alinhar itens ao centro da navegação */  
   max-width: 1200px; /* quando tela chega a 1200, container para de crescer */
-  box-sizing: border-box; /* permite que padding não some ao max-width */
-  /* margin auto vai centralizar o conteudo ao passar dos 1200*/
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+  /* removi essa parte porque ja consta no .container
+  box-sizing: border-box; /* permite que padding não some ao max-width
+  margin auto vai centralizar o conteudo ao passar dos 1200
   margin-left: auto;
   margin-right: auto;
-  flex-wrap: wrap; /* quebrar menu pra baixo da logo quando tela diminuir */
-  gap: 20px;
+  flex-wrap: wrap; /* quebrar menu pra baixo da logo quando tela diminuir */  
 }
 
 .header-menu {

@@ -8,12 +8,14 @@
   grid-template-columns: 1fr 1fr;
   gap: 0px 40px;
   max-width: 1200px; /* manter conteudo dentro do container ao expandir */
-  box-sizing: border-box; /* para somar os paddings definidos abaixo */
+  
+  /* removi essa parte porque ja consta no .container
+  box-sizing: border-box; para somar os paddings definidos abaixo
   padding-left: 20px;
   padding-right: 20px;
-  /* margin auto mantem conteudo alinhado ao header ao expandir */
+  margin auto mantem conteudo alinhado ao header ao expandir
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
 }
 
 /* Inicialmente, o grid coloca cada elemento na ordem do html: h1 (1°l 1°c), p (1°l 2°c), a (2°l 1°c), img (2°l 2°c). Grid column define qual coluna quero posicionar cada elemento 
@@ -35,10 +37,11 @@ Não é mais necessária essa parte devido a div introducao-conteudo
   padding-bottom: 200px; /* 80px do padding dele + 120px da shadow em introducao-bg */
 }
 
-.introducao img {  
+.introducao img {
+  width: 100%; /* imagem fica no maximo 100% do tamanho do container */  
   height: 100%;
   object-fit: cover; /* não deixa imagem ser esmagada ao diminuir a tela */
-  border-radius: 4px;
+  border-radius: 4px;  
 }
 
 .introducao h1 {

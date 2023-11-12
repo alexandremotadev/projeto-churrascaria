@@ -1,0 +1,66 @@
+.carnes-lista {
+  /* O padding é melhor para separar da introducao, porque a margin pode ter colisão caso o item de cima tenha margin bottom */
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
+.carnes-lista h2 {
+  /* colocar h2 alinhado com container da introducao (coloquei o restante em .container no componentes */
+  margin-bottom: 40px;
+}
+
+.carnes-lista ul {
+  display: flex; /* colocar elementos da lista um do lado do outro */
+  gap: 40px;
+  padding: 0 20px; /* desgrudar das laterais do site */
+  max-width: 1400px; /* ao expandir vai passar do container de 1200px */
+  margin-left: auto; /* margin left e right auto para centralizar a lista ao expandir */
+  margin-right: auto;
+  flex-wrap: wrap; /* quebra itens e deixa uma carne abaixo da outra*/
+}
+
+.carnes-lista li {
+  flex: 1; /* permite que itens fiquem um do lado do outro se tiver o espaço na tela, se não tiver, vai jogando um pra baixo do outro (quando li tiver abaixo de 280px) */
+  min-width: 280px;
+}
+
+.carnes-lista a {
+  display: block; /* transforma a imagem + nome + valor em um unico bloco */
+}
+
+.carnes-lista img {
+  margin-bottom: 16px;  
+}
+
+.carnes-lista h3 {
+  margin-bottom: 8px;
+  display: flex; /* alinhar before*/
+  align-items: center; /* alinhar before*/
+}
+
+.carnes-lista h3::before {
+  content: "";
+  background-color: var(--cor-p1);
+  height: 8px;
+  width: 12px;
+  display: inline-block;
+  margin-right: 8px;
+  transition: width 0.2s; /* animação hover do "a:hover" abaixo*/
+}
+
+.carnes-lista a:hover h3::before {  
+  width: 24px;  /* aumentar width do span ao passar o mouse (mostrar que é area clicavel) */
+}
+
+.carnes-lista li span {
+  padding-left: 20px; /* alinhar o preço ao nome da carn. soma 12px width + margin right 8px ambos do before */
+}
+
+@media (max-width: 800px) {
+  .carnes-lista {
+    padding-bottom: 60px;
+  }
+  .carnes-lista ul {
+    gap: 20px;
+  }
+}

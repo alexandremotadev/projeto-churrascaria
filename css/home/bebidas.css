@@ -1,0 +1,81 @@
+.bebidas-bg {
+  background-color: var(--cor-11);
+  box-shadow: inset 0 80px var(--cor-0), inset 0 -80px var(--cor-0); /* sombra pra cima , sombra pra baixo */
+}
+
+.bebidas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+/* evitar que imagem fique menor que conteudo ao diminuir tamanho da tela */
+.bebidas-imagem img {
+  width: 100%; /* imagem fica no maximo 100% do tamanho do container */
+  height: 100%;
+  object-fit: cover; /* impede que imagem seja esmagada ao diminuir tela */
+  object-position: left;
+}
+
+.bebidas-conteudo {
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
+.bebidas-conteudo > span { /* se refere apenas ao span da classe bebidas-conteudo */
+  display: block; /* span é display inline por padrão, margin só funciona se alterar ele pra block */
+  margin-bottom: 20px;
+}
+
+.bebidas-conteudo h2 {
+  margin-bottom: 32px;
+}
+
+.bebidas-conteudo > p { /* se refere apenas ao p da classe bebidas-conteudo */
+  margin-bottom: 20px;
+}
+
+.bebidas-conteudo a {
+  margin-bottom: 80px;
+}
+
+.bebidas-vantagens {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* só funciona se tiver display grid */
+  gap: 40px;  
+}
+
+.bebidas-vantagens h3 {
+  margin-bottom: 8px;
+  width: max-content; /* não deixa titulo quebrar ao diminuir a tela */
+}
+
+.bebidas-vantagens img {
+  width: 24px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+  .bebidas-bg {
+    box-shadow: initial; /* remove a box shadow */
+  }
+  .bebidas {
+    grid-template-columns: 1fr;
+  }
+  .bebidas-conteudo {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .bebidas-imagem {
+    display: none;
+  }
+  .bebidas a {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 800px) {
+  .bebidas-vantagens {
+    display: flex;
+    flex-direction: column;
+  }
+}
