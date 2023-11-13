@@ -8,6 +8,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 0px 40px;
   max-width: 1200px; /* manter conteudo dentro do container ao expandir */
+  padding-top: 40px;
   
   /* removi essa parte porque ja consta no .container
   box-sizing: border-box; para somar os paddings definidos abaixo
@@ -61,6 +62,7 @@ Não é mais necessária essa parte devido a div introducao-conteudo
   .introducao {
     grid-template-columns: 1fr; /* transformar em apenas uma coluna*/
     gap: 32px;
+    padding-top: 0px;
   }
   .introducao-conteudo {
     padding-bottom: 0px; /* tirar distancia entre botao e imagem*/
