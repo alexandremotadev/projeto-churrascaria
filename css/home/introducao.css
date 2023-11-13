@@ -57,7 +57,7 @@ Não é mais necessária essa parte devido a div introducao-conteudo
   .introducao-bg {
     background: var(--cor-11);
     padding-top: 40px;
-    box-shadow: inset 0 -60px var(--cor-0);
+    box-shadow: inset 0 -60px var(--cor-11);
   }
   .introducao {
     grid-template-columns: 1fr; /* transformar em apenas uma coluna*/
@@ -71,7 +71,8 @@ Não é mais necessária essa parte devido a div introducao-conteudo
     margin-bottom: 16px;
   }
   .introducao img {
-    height: 300px;
-    width: 100%;
+    display: none;
+    /* height: 300px;
+    width: 100%; */
   }
 }
