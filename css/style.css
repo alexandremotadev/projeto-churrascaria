@@ -16,5 +16,11 @@
 /* Carnes */
 @import "./carnes/carnes-lista.css";
 
+/* Cardápio */
+@import "./carnes/cardapio.css";
+
 /* Planos */
 @import "./planos/planos.css";
+
+/* Termos */
+@import "./termos/termos.css";

@@ -1,0 +1,111 @@
+.cardapio-bg {
+  /* colocar cor branca e cor preta no mesmo background */
+  background: linear-gradient(to right, var(--cor-0) 30%, var(--cor-11) 0%);
+}
+
+.cardapio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* Posicionar span do preço em cima da imagem no top right (poderia usar position relative e absolute, mas dessa forma há mais possibilidades de variar posicionamento */
+.cardapio-imagem {
+  display: grid; /* posicionar o span */
+}
+
+.cardapio-imagem img {
+  grid-area: 1/1; /* posicionar o span */
+  width: 100%;
+  height: 100%;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.cardapio-imagem span {
+  grid-area: 1/1; /* posicionar o span */
+  place-self: start end; /* posicionar o span */
+  margin-top: 20px; /* posicionar o span */
+  background: var(--cor-12);
+  padding: 8px 16px 8px 8px;
+  display: inline-block; /* acertar abaixo da imagem e não tentar expandir o máximo */
+  border-radius: 4px 0 0 4px;
+}
+
+.cardapio-conteudo {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-content: start; /* alinhar conteudo ao inicio. quando imagem crescer, também não aumenta espaço entre as linhas do conteudo */
+}
+
+.cardapio h2,
+.cardapio p {
+  grid-column: 1/-1;
+}
+
+.cardapio h2 {
+  margin-bottom: 20px;
+}
+
+.cardapio h2::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 8px;
+  background-color: var(--cor-p1);
+  margin-bottom: 8px;
+}
+
+.cardapio p {
+  margin-bottom: 32px;
+}
+
+/* para botão alinhar ao final do grid no bottom right e não tentar expandir todo o grid */
+.cardapio a {
+  place-self: end;
+}
+
+.cardapio li {
+  display: flex; /* colocar icones ao lado do texto */
+  align-items: center;
+}
+
+/* icones svg da lista */
+.cardapio-conteudo img {
+  width: 24px;
+  margin-right: 8px;
+}
+
+/* adicionar espaçamento entre itens da "li" */
+.cardapio ul {
+  display: grid;
+  gap: 16px;
+}
+
+@media (max-width: 800px) {
+  .cardapio-bg {    
+    background: var(--cor-11);
+  }
+  .cardapio {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cardapio-conteudo {
+    grid-template-columns: 1fr;
+  }
+  .cardapio ul {
+    font-size: 1rem;
+    grid-template-columns: 1fr 1fr; /* aproveitar colunas vazias à direita da lista */
+    margin-bottom: 32px;
+  }
+  .cardapio a {
+    place-self: start; /* botao vai ficar no inicio, alinhado a esquerda */
+  }
+}
