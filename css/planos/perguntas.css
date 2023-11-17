@@ -1,0 +1,66 @@
+.perguntas {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.perguntas h2 {
+  margin-bottom: 60px;
+}
+
+/* falar com a div dentro da dl */
+.perguntas dl > div {
+  padding: 20px;
+  border-radius: 4px;
+}
+
+/* pintar item sim e item não nas perguntas. odd = impares. */
+.perguntas dl > div:nth-child(odd) {
+  background-color: var(--cor-1);
+}
+
+/* posicionar icone a esquerda, texto no meio e icone seta a direita */
+.perguntas dt {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* primeira coluna automatica (tamanho que tiver de conteudo, neste caso icone), segunda coluna é da pergunta entao cresce o quanto for possivel e a terceira coluna automatica (tamanho que tiver de conteudo, neste caso icone) */
+  align-items: center; /* alinhar icones ao centro do texto */
+  gap: 8px;
+  cursor: pointer; /* altera desenho do cursor, para saber que pode abrir e fechar perguntas */
+}
+
+.perguntas dt::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 8px;
+  background-color: var(--cor-p1);
+}
+
+.perguntas dt::after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 6px;
+  background: url(../../img/icones/seta-abrir.svg);
+  transition: 0.3s;
+}
+
+/* rodar seta ao passar o mouse */
+.perguntas dt:hover::after {
+  transform: rotate(180deg);
+}
+
+.perguntas dd {
+  padding-left: 20px;
+  padding-top: 16px;
+  max-width: 80ch;
+}
+
+@media (max-width: 800px) {
+  .perguntas {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .perguntas h2 {
+    margin-bottom: 40px;
+  }
+}

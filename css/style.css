@@ -21,6 +21,8 @@
 
 /* Planos */
 @import "./planos/planos.css";
+@import "./planos/vantagens.css";
+@import "./planos/perguntas.css";
 
 /* Termos */
 @import "./termos/termos.css";
