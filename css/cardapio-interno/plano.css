@@ -1,0 +1,42 @@
+.plano-bg {
+  background-color: var(--cor-11);
+}
+
+.plano {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.plano-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* sem este comando, a imagem é distorcida */
+}
+
+.plano-conteudo {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.plano h2 {
+  margin-bottom: 32px;
+}
+
+.plano p {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+  .plano {
+    grid-template-columns: 1fr;
+  }
+  .plano-conteudo {
+    grid-row: 1;
+    padding-top: 40px;
+    padding-bottom: 0px;
+  }
+  .plano-imagem {
+    height: 200px;
+  }
+}

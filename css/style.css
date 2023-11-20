@@ -19,6 +19,10 @@
 /* Cardápio */
 @import "./carnes/cardapio.css";
 
+/* Cardápio Interno */
+@import "./cardapio-interno/cardapio-interno.css";
+@import "./cardapio-interno/plano.css";
+
 /* Planos */
 @import "./planos/planos.css";
 @import "./planos/vantagens.css";

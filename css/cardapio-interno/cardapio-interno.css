@@ -1,0 +1,116 @@
+.cardapio-interno {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#cardapio-interno .titulo p{
+  text-transform: uppercase;
+}
+
+.cardapio-interno-imagens {
+  display: flex; /* uma imagem do lado da outra */
+  flex-wrap: wrap; /* quebrar se estourar container*/
+  gap: 20px;
+}
+
+.cardapio-interno-imagens img {
+  flex: 1;
+  min-width: 200px; /* se der pra diminuir até 200px, a imagem vai tentar, se ela não conseguir ter menos que 200, ela cresce novamente */
+}
+
+.cardapio-interno-imagens img:first-child {
+  min-width: 100%; /* coloca primeiro elemento como o maior de todos */
+}
+
+.cardapio-interno-conteudo > p {
+  margin-bottom: 32px;
+}
+
+.cardapio-interno-comprar {
+  display: grid;
+  grid-template-columns: max-content auto; /* botao fica no tamanho maximo sem quebrar, outros elementos podem quebrar */
+  align-items: center;
+  justify-items: start;
+  gap: 8px 12px; /* 8 para linha e 12 para coluna */
+  margin-bottom: 40px;
+}
+
+.cardapio-interno-comprar a {
+  grid-row: span 2; /* a vai ocupar 2 linhas */
+}
+
+.cardapio-interno-comprar span {
+  display: flex;
+  align-items: center;
+  background-color: var(--cor-12);
+  padding: 4px 8px;
+  border-radius: 4px;
+  gap: 8px;  
+}
+
+.cardapio-interno-conteudo h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.015em; /* espaçamento entre as letras da palavra Informações */
+  margin-bottom: 12px;
+}
+
+.cardapio-interno-informacoes, .cardapio-interno-tabela {
+  padding: 32px;
+  background-color: var(--cor-12);
+  border-radius: 4px;
+}
+
+.cardapio-interno-informacoes {
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.cardapio-interno-informacoes img {
+  width: 24px;
+  margin-bottom: 8px;
+}
+
+.cardapio-interno-informacoes h3 {
+  margin-bottom: 8px;
+}
+
+.cardapio-interno-tabela li {
+  padding: 4px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--cor-11);
+}
+
+.cardapio-interno-tabela li:last-child {
+  border-bottom: none; /* tirar borda bottom somente do ultimo elemento */
+}
+
+.cardapio-interno-tabela span {
+  color: var(--cor-6);
+}
+
+@media (max-width: 800px) {
+  .cardapio-interno {
+    grid-template-columns: 1fr;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .cardapio-interno-imagens {
+    grid-row: 2; /* joga imagens para segunda linha. neste caso o conteúdo será mostrado antes das imagens */
+  }
+}
+
+@media (max-width: 400px) {
+  .cardapio-interno-informacoes {
+    grid-template-columns: 1fr;
+  }
+  .cardapio-interno-comprar {
+    grid-template-columns: 1fr
+  }
+}

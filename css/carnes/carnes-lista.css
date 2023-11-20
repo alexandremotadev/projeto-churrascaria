@@ -9,6 +9,10 @@
   margin-bottom: 40px;
 }
 
+#cardapio-interno .carnes-lista ul { 
+  padding: 0px 0px 20px 0px; /* sem isso o título h2 fica desalinhado das imagens adicionais do cardapio interno */
+}
+
 .carnes-lista ul {
   display: flex; /* colocar elementos da lista um do lado do outro */
   gap: 40px;
