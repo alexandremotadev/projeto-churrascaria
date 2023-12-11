@@ -6,7 +6,7 @@
 
 .form label {
   display: block; /* quadro para preenchimento vai pra baixo de cada titulo */
-  font: 600 1rem/1.5 "Poppins", sans-serif; /* 1.5 é a altura da linha */
+  font: 400 1rem/1.5 "Poppins", sans-serif; /* 1.5 é a altura da linha */
   margin-bottom: 4px;
 }
 

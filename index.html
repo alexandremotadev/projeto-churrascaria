@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Steak House - Churrascaria Premium</title>
   <meta name="description" content="Churrascaria Premium com uma grande variedade de pratos, 3 tipos de carnes selecionadas.">
-  
-  <link rel="shortcut icon" href="./img/logo-steak-house.png" type="image/x-icon" />
+
+  <link rel="shortcut icon" href="./img/logo-steak-house.png" type="image/x-icon" />  
+  <link rel="preload" href="./css/style.css" as="style"> <!-- carregar css antes de qualquer coisa -->
   <link rel="stylesheet" href="./css/style.css">
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
   <header class="header-bg"> <!-- Quando a class tem -bg é porque tem um background que se expande de ponta a ponta -->
     <div class="header container"> <!-- Essa div centraliza o conteúdo no grid -->
-      <a href="./"><img src="./img/logo-steak-house.png" alt="Steak House" width="130" height="135"></a> <!-- Home ao clicar na img -->      
-      
+      <a href="./"><img src="./img/logo-steak-house.png" alt="Steak House" width="130" height="135"></a> <!-- Home ao clicar na img -->
+
       <nav aria-label="primaria">
         <ul class="header-menu font-1-m cor-0"> <!-- Todos os "a" vão herdar o cor-branco -->
           <li><a href="./cardapio.html">Cardápio</a></li>
           <li><a href="./planos.html">Planos</a></li>
           <li><a href="./contato.html">Contato</a></li>
         </ul>
-      </nav>        
+      </nav>
     </div>
   </header>
 
@@ -33,176 +36,180 @@
     <div class="introducao container"> <!-- container é o que segura nos 1200px. background é infinito -->
       <!-- só de definir a div introducao-conteudo, ela já posiciona o conteudo de um lado e a imagem do outro lado -->
       <div class="introducao-conteudo">
-        
+
         <h1 class="font-1-xxl cor-0">Carnes da melhor qualidade<span class="cor-p1">.</span></h1>
         <p class="font-2-l cor-5">A melhor churrascaria de Belo Horizonte.</p>
         <a class="botao" href="./planos.html">Escolha um plano</a>
       </div>
-      <div> <!-- nunca deixar imagem direto no grid, porque ela funciona diferente em browsers diferentes. Sempre colocar em div ou elemento similar.-->
-        <img src="./img/fotos/introducao.jpg" alt="Picanha">
-      </div>
+      
+      <!-- nunca deixar imagem direto no grid, porque ela funciona diferente em browsers diferentes. Sempre colocar em div ou elemento similar.-->
+      <picture>
+        <!-- vai carregar essa imagem no mobile em vez de introdução-->
+        <source media="(max-width= 800px)" srcset="./img/carnes/picanha.jpg">
+        <img src="./img/fotos/introducao.jpg" width="1280" height="1600" alt="Picanha">
+      </picture>       
     </div>
   </main>
-  
-    <article class="carnes-lista">
-      <h2 class="container font-1-xxl">escolha a sua<span class="cor-p1">.</span></h2>
-    
-      <ul>
-        <li>
-          <a href="./carnes/picanha.html">
-            <img src="./img/carnes/picanha-home.jpg" alt="Picanha">
-            <h3 class="font-1-xl">Picanha</h3>
-            <span class="font-2-m cor-8">R$ 300</span>
-          </a>
-        </li>
-        
-        <li>
-          <a href="./carnes/costela.html">
-            <img src="./img/carnes/costela-home.jpg" alt="Costela">
-            <h3 class="font-1-xl">Costela</h3>
-            <span class="font-2-m cor-8">R$ 200</span>
-          </a>
-        </li>
-        
-        <li>
-          <a href="./carnes/filemignon.html">
-            <img src="./img/carnes/filemignon-home.jpg" alt="Filé Mignon">
-            <h3 class="font-1-xl">Filé Mignon</h3>
-            <span class="font-2-m cor-8">R$ 100</span>
-          </a>
-        </li>
-      </ul>
-    </article>
 
-    <article class="bebidas-bg">
-      <div class="bebidas container">
-        <div class="bebidas-conteudo">
-          <span class="font-2-l-b cor-5">Bebidas</span>
-          <h2 class="font-1-xxl cor-0">Você escolhe o seu acompanhamento<span class="cor-p1">.</span></h2>
-          <p class="font-2-l cor-5">Cada bebiba é preparada a partir de ingredientes de ótima qualidade.</p>
-          <a class="botao" href="./cardapio.html">Escolha uma bebida</a>
-          
-          <div class="bebidas-vantagens">
-            <div>
-              <img src="./img/icones/rastreador.svg" alt="">
-              <h3 class="font-1-m cor-0">Vinhos</h3>
-              <p class="font-2-s cor-5">Todos os vinhos são tintos importados de Itália, França, Portugal e Chile.</p>
-            </div>
-            <div>
-              <img src="./img/icones/rastreador.svg" alt="">
-              <h3 class="font-1-m cor-0">Cerveja Artesanal</h3>
-              <p class="font-2-s cor-5">Nossas cervejas são bebidas fermentadas feitas de cereais, água, lúpulo e levedura, produzidas de forma artesanal por cervejeiros independentes.</p>
-            </div>
-            <div>
-              <img src="./img/icones/rastreador.svg" alt="">
-              <h3 class="font-1-m cor-0">Drinks</h3>
-              <p class="font-2-s cor-5">Os drinks são estimulantes ao apetite. Têm sabores amargos ou ácidos, levando pouco açúcar em seu preparo. Podem ser feitos com destilados, bitters, licores, vermouths.</p>
-            </div>
+  <article class="carnes-lista">
+    <h2 class="container font-1-xxl">escolha a sua<span class="cor-p1">.</span></h2>
+
+    <ul>
+      <li>
+        <a href="./carnes/picanha.html">
+          <img src="./img/carnes/picanha-home.jpg" alt="Picanha" width="920" height="1040">
+          <h3 class="font-1-xl">Picanha</h3>
+          <span class="font-2-m cor-8">R$ 300</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="./carnes/costela.html">
+          <img src="./img/carnes/costela-home.jpg" alt="Costela" width="920" height="1040">
+          <h3 class="font-1-xl">Costela</h3>
+          <span class="font-2-m cor-8">R$ 200</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="./carnes/filemignon.html">
+          <img src="./img/carnes/filemignon-home.jpg" alt="Filé Mignon" width="920" height="1040">
+          <h3 class="font-1-xl">Filé Mignon</h3>
+          <span class="font-2-m cor-8">R$ 100</span>
+        </a>
+      </li>
+    </ul>
+  </article>
+
+  <article class="bebidas-bg">
+    <div class="bebidas container">
+      <div class="bebidas-conteudo">
+        <span class="font-2-l-b cor-5">Bebidas</span>
+        <h2 class="font-1-xxl cor-0">Você escolhe o seu acompanhamento<span class="cor-p1">.</span></h2>
+        <p class="font-2-l cor-5">Cada bebiba é preparada a partir de ingredientes de ótima qualidade.</p>
+        <a class="botao" href="./cardapio.html">Escolha uma bebida</a>
+
+        <div class="bebidas-vantagens">
+          <div>
+            <img src="./img/icones/rastreador.svg" width="24" height="24" alt="">
+            <h3 class="font-1-m cor-0">Vinhos</h3>
+            <p class="font-2-s cor-5">Todos os vinhos são tintos importados de Itália, França, Portugal e Chile.</p>
+          </div>
+          <div>
+            <img src="./img/icones/rastreador.svg" width="24" height="24" alt="">
+            <h3 class="font-1-m cor-0">Cerveja Artesanal</h3>
+            <p class="font-2-s cor-5">Nossas cervejas são bebidas fermentadas feitas de cereais, água, lúpulo e levedura, produzidas de forma artesanal por cervejeiros independentes.</p>
+          </div>
+          <div>
+            <img src="./img/icones/rastreador.svg" width="24" height="24" alt="">
+            <h3 class="font-1-m cor-0">Drinks</h3>
+            <p class="font-2-s cor-5">Os drinks são estimulantes ao apetite. Têm sabores amargos ou ácidos, levando pouco açúcar em seu preparo. Podem ser feitos com destilados, bitters, licores, vermouths.</p>
           </div>
         </div>
-
-        <div class="bebidas-imagem">
-          <img src="./img/bebidas/vinho.jpg" alt="">
-        </div>
-      </div>      
-    </article>
-
-    <!-- criar section porque não faz sentido sozinho, somente no contexto da churrascaria. obrigatório ter aria-label na section, para que seja criado ponto de referencia -->
-    <section class="parceiros" aria-label="Nossos Parceiros">
-      <h2 class="container font-1-xxl">nossos parceiros<span class="cor-p1">.</span></h2>
-
-      <ul>
-        <li><img src="./img/parceiros/caravan.svg" alt="caravan"></li>
-        <li><img src="./img/parceiros/dogs.svg" alt="dogs"></li>
-        <li><img src="./img/parceiros/flexblog.svg" alt="flexblog"></li>
-        <li><img src="./img/parceiros/handel.svg" alt="handel"></li>
-        <li><img src="./img/parceiros/lescone.svg" alt="lescone"></li>
-        <li><img src="./img/parceiros/ranek.svg" alt="ranek"></li>
-        <li><img src="./img/parceiros/surfbot.svg" alt="surfbot"></li>
-        <li><img src="./img/parceiros/wildbeast.svg" alt="wildbeast"></li>             
-      </ul>
-    </section>
-
-    <section class="depoimento" aria-label="Depoimento">
-      <div>
-        <img src="./img/fotos/depoimento.jpg" alt="Pessoa segurando cardapio da churrascaria">
       </div>
-      <div class="depoimento-conteudo">
-        <blockquote class="font-1-xl cor-p5"> <!-- blockquote serve para quando alguém disse o que está escrito -->
-          <p>A churrascaria possui ótimas carnes e bebidas, além do excelente atendimento. Tudo possui uma grande qualidade e os preços são justos pela experiência no local. Recomendo a todos que amo.</p>
-        </blockquote>
-        <span class="font-1-m-b cor-p4">Júlia Andrade</span>
+
+      <div class="bebidas-imagem">
+        <img src="./img/bebidas/vinho.jpg" width="740" height="1057" alt="">
       </div>
-    </section>
+    </div>
+  </article>
 
-    <article class="planos-bg">
-      <div class="planos container">
-        <h2 class="font-1-xxl cor-0">planos<span class="cor-p1">.</span></h2>
-        <div class="planos-item">
-          <h3 class="font-1-xl cor-6">PRATA</h3>
-          <span class="font-1-xl cor-0">R$ 199 <span class="font-1-xs cor-6">mensal</span></span>
-          <ul class="font-2-m cor-0">
-            <li>Um rodízio por mês</li>
-            <li>Benefício válido apenas de Segunda à Sexta</li>            
-            <li>Suporte de 08h às 18h</li>
-            <li>Cobertura estadual</li>
-          </ul>
-          <a class="botao secundario" href="./orcamento.html">Inscreva-se</a>
+  <!-- criar section porque não faz sentido sozinho, somente no contexto da churrascaria. obrigatório ter aria-label na section, para que seja criado ponto de referencia -->
+  <section class="parceiros" aria-label="Nossos Parceiros">
+    <h2 class="container font-1-xxl">nossos parceiros<span class="cor-p1">.</span></h2>
+
+    <ul>
+      <li><img src="./img/parceiros/caravan.svg" alt="Caravan" width="140" height="38"></li>
+      <li><img src="./img/parceiros/ranek.svg" alt="Ranek" width="149" height="36"></li>
+      <li><img src="./img/parceiros/handel.svg" alt="Handel" width="140" height="50"></li>
+      <li><img src="./img/parceiros/dogs.svg" alt="Dogs" width="152" height="39"></li>
+      <li><img src="./img/parceiros/lescone.svg" alt="LeScone" width="208" height="41"></li>
+      <li><img src="./img/parceiros/flexblog.svg" alt="FlexBlog" width="165" height="38"></li>
+      <li><img src="./img/parceiros/wildbeast.svg" alt="Wildbeast" width="196" height="34"></li>
+      <li><img src="./img/parceiros/surfbot.svg" alt="Surfbot" width="200" height="49"></li>
+    </ul>
+  </section>
+
+  <section class="depoimento" aria-label="Depoimento">
+    <div>
+      <img src="./img/fotos/depoimento.jpg" width="1060" height="706" alt="Pessoa segurando cardapio da churrascaria">
+    </div>
+    <div class="depoimento-conteudo">
+      <blockquote class="font-1-xl cor-p5"> <!-- blockquote serve para quando alguém disse o que está escrito -->
+        <p>A churrascaria possui ótimas carnes e bebidas, além do excelente atendimento. Tudo possui uma grande qualidade e os preços são justos pela experiência no local. Recomendo a todos que amo.</p>
+      </blockquote>
+      <span class="font-1-m-b cor-p4">Júlia Andrade</span>
+    </div>
+  </section>
+
+  <article class="planos-bg">
+    <div class="planos container">
+      <h2 class="font-1-xxl cor-0">planos<span class="cor-p1">.</span></h2>
+      <div class="planos-item">
+        <h3 class="font-1-xl cor-6">PRATA</h3>
+        <span class="font-1-xl cor-0">R$ 199 <span class="font-1-xs cor-6">mensal</span></span>
+        <ul class="font-2-m cor-0">
+          <li>Um rodízio por mês</li>
+          <li>Benefício válido apenas de Segunda à Sexta</li>
+          <li>Suporte de 08h às 18h</li>
+          <li>Cobertura estadual</li>
+        </ul>
+        <a class="botao secundario" href="./orcamento.html">Inscreva-se</a>
+      </div>
+
+      <div class="planos-item">
+        <h3 class="font-1-xl cor-p1">OURO</h3>
+        <span class="font-1-xl cor-0">R$ 299 <span class="font-1-xs cor-6">mensal</span></span>
+        <ul class="font-2-m cor-0">
+          <li>Dois rodízios por mês</li>
+          <li>Benefício válido em qualquer dia</li>
+          <li>Suporte 24h</li>
+          <li>Cobertura nacional</li>
+          <li>Desconto em parceiros</li>
+          <li>Acesso ao Clube Steak House</li>
+        </ul>
+        <a class="botao" href="./orcamento.html">Inscreva-se</a>
+      </div>
+    </div>
+  </article>
+
+  <footer class="footer-bg">
+    <div class="footer container">
+      <img src="./img/logo-steak-house.png" alt="Steak House" width="130" height="135">
+      <div class="footer-contato">
+        <h3 class="font-2-l-b cor-0">Contato</h3>
+        <ul class="font-2-m cor-5">
+          <li><a href="tel:+5531999998877">+55 31 99999-8877</a></li> <!-- se clicar no link ele liga pro n° -->
+          <li><a href="mailto:contato@steakhouse.com">contato@steakhouse.com</a></li> <!-- abre app do email -->
+          <li>Av. Olegário Maciel, 1600 - Santo Agostinho</li>
+          <li>Belo Horizonte - MG</li>
+        </ul>
+        <div class="footer-redes">
+          <a href="./">
+            <img src="./img/redes/instagram.svg" width="32" height="32" alt="Instagram">
+          </a>
+          <a href="./">
+            <img src="./img/redes/facebook.svg" width="32" height="32" alt="Facebook">
+          </a>
+          <a href="./">
+            <img src="./img/redes/youtube.svg" width="32" height="32" alt="Youtube">
+          </a>
         </div>
-        
-        <div class="planos-item">
-          <h3 class="font-1-xl cor-p1">OURO</h3>
-          <span class="font-1-xl cor-0">R$ 299 <span class="font-1-xs cor-6">mensal</span></span>
-          <ul class="font-2-m cor-0">
-            <li>Dois rodízios por mês</li>
-            <li>Benefício válido em qualquer dia</li>            
-            <li>Suporte 24h</li>
-            <li>Cobertura nacional</li>
-            <li>Desconto em parceiros</li>
-            <li>Acesso ao Clube Steak House</li>
+      </div>
+      <div class="footer-informacoes">
+        <h3 class="font-2-l-b cor-0">Informações</h3>
+        <nav>
+          <ul class="font-1-m cor-5">
+            <li><a href="./cardapio.html">Cardápio</a></li>
+            <li><a href="./planos.html">Planos</a></li>
+            <li><a href="./contato.html">Contato</a></li>
+            <li><a href="./termos.html">Termos e Condições</a></li>
           </ul>
-          <a class="botao" href="./orcamento.html">Inscreva-se</a>
-        </div>  
-      </div>      
-    </article>
-
-    <footer class="footer-bg">
-      <div class="footer container">
-        <img src="./img/logo-steak-house.png" alt="Steak House" width="130" height="135">
-        <div class="footer-contato">
-          <h3 class="font-2-l-b cor-0">Contato</h3>
-          <ul class="font-2-m cor-5">
-            <li><a href="tel:+5531999998877">+55 31 99999-8877</a></li> <!-- se clicar no link ele liga pro n° -->
-            <li><a href="mailto:contato@steakhouse.com">contato@steakhouse.com</a></li> <!-- abre app do email -->
-            <li>Av. Olegário Maciel, 1600 - Santo Agostinho</li>
-            <li>Belo Horizonte - MG</li>
-          </ul>
-          <div class="footer-redes">
-            <a href="./">
-              <img src="./img/redes/instagram.svg" alt="Instagram">
-            </a>
-            <a href="./">
-              <img src="./img/redes/facebook.svg" alt="Facebook">
-            </a>
-            <a href="./">
-              <img src="./img/redes/youtube.svg" alt="Youtube">
-            </a>
-          </div>
-        </div> 
-          <div class="footer-informacoes">
-            <h3 class="font-2-l-b cor-0">Informações</h3>
-            <nav>
-              <ul class="font-1-m cor-5">
-                <li><a href="./cardapio.html">Cardápio</a></li>
-                <li><a href="./planos.html">Planos</a></li>
-                <li><a href="./contato.html">Contato</a></li>
-                <li><a href="./termos.html">Termos e Condições</a></li>
-              </ul>
-            </nav>
-          </div>         
-          <p class="footer-copy font-2-m cor-6">Steak House © Todos os direitos reservados.</p>         
-        </div>      
-    </footer>
-  </body>
+        </nav>
+      </div>
+      <p class="footer-copy font-2-m cor-6">Steak House © Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
 
 </html>
