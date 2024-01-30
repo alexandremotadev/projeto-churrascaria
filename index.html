@@ -7,8 +7,8 @@
   <title>Steak House - Churrascaria Premium</title>
   <meta name="description" content="Churrascaria Premium com uma grande variedade de pratos, 3 tipos de carnes selecionadas.">
 
-  <link rel="shortcut icon" href="./img/logo-steak-house.png" type="image/x-icon" />  
-  <link rel="preload" href="./css/style.css" as="style"> <!-- carregar css antes de qualquer coisa -->
+  <link rel="shortcut icon" href="./img/logo-steak-house.png" type="image/x-icon" />
+  <link rel="preload" href="./css/style.css" as="style"> <!-- carregar css antes de qualquer coisa -->  
   <link rel="stylesheet" href="./css/style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,13 +41,14 @@
         <p class="font-2-l cor-5">A melhor churrascaria de Belo Horizonte.</p>
         <a class="botao" href="./planos.html">Escolha um plano</a>
       </div>
-      
+
       <!-- nunca deixar imagem direto no grid, porque ela funciona diferente em browsers diferentes. Sempre colocar em div ou elemento similar.-->
       <picture>
-        <!-- vai carregar essa imagem no mobile em vez de introdução-->
+        <!-- picture vai carregar essa imagem no mobile em vez de introdução
+        media = defini qual mediaquery vai carregar a imagem -->
         <source media="(max-width= 800px)" srcset="./img/carnes/picanha.jpg">
         <img src="./img/fotos/introducao.jpg" width="1280" height="1600" alt="Picanha">
-      </picture>       
+      </picture>
     </div>
   </main>
 
@@ -91,7 +92,8 @@
 
         <div class="bebidas-vantagens">
           <div>
-            <img src="./img/icones/rastreador.svg" width="24" height="24" alt="">
+            <!-- svg width e height mesmo valor do .bebidas-vantagens img no css --->
+            <img src="./img/icones/rastreador.svg" width="24" height="24" alt=""> 
             <h3 class="font-1-m cor-0">Vinhos</h3>
             <p class="font-2-s cor-5">Todos os vinhos são tintos importados de Itália, França, Portugal e Chile.</p>
           </div>

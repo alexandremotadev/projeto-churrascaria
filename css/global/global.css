@@ -20,7 +20,7 @@ a {
 
 img {
   max-width: 100%;
-  height: auto; /* evitar distorcimentos de imagens */
+  height: auto; /* evitar distorção de imagens */
   display: block;
 }
 
