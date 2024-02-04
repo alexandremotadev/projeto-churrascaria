@@ -5,18 +5,18 @@
 .header {
   display: flex; /* colocar imagem do lado do menu */
   justify-content: space-between; /* espaço entre eles, logo em uma ponta e menu na outra ponta */
-  align-items: center; /* alinhar itens ao centro da navegação */  
+  align-items: center; /* alinhar itens ao centro da navegação */
   max-width: 1200px; /* quando tela chega a 1200, container para de crescer */
   gap: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
-  
+
   /* removi essa parte porque ja consta no .container
   box-sizing: border-box; /* permite que padding não some ao max-width
   margin auto vai centralizar o conteudo ao passar dos 1200
   margin-left: auto;
   margin-right: auto;
-  flex-wrap: wrap; /* quebrar menu pra baixo da logo quando tela diminuir */  
+  flex-wrap: wrap; /* quebrar menu pra baixo da logo quando tela diminuir */
 }
 
 .header-menu {
@@ -35,21 +35,22 @@
   content: "";
   display: block;
   height: 2px;
-  width: 0px; 
+  width: 0px;
   background: var(--cor-0);
   margin-top: 4px;
   transition: 0.3s; /* tempo para barra crescer abaixo do a */
   position: absolute; /* tirar o traço do fluxo. Sem isso, o menu não fica centralizado com a logo  */
 }
 
-.header-menu a:hover:after {
+.header-menu a:hover::after,
+.header-menu a.ativo::after {
   width: 100%; /* 100% da largura do a */
 }
 
 @media (max-width: 800px) {
   .header-menu {
     gap: 20px;
-  }  
+  }
   .header-menu a {
     background: var(--cor-11);
     padding: 12px 16px;
@@ -68,10 +69,10 @@
 
 @media (max-width: 600px) {
   .header-menu {
-    gap: 12px;    
+    gap: 12px;
   }
   .header-menu a {
     padding: 8px 12px;
     font-size: 14px;
-  }  
+  }
 }
